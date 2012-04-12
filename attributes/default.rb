@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+default[:postgresql][:local_auth_method] = "ident"
+
 case platform
 when "debian"
 

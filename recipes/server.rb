@@ -48,6 +48,7 @@ template "#{node[:postgresql][:dir]}/pg_hba.conf" do
   owner "postgres"
   group "postgres"
   mode 0600
+  variables(:local_auth_method => node[:postgresql][:local_auth_method])
   notifies :reload, resources(:service => "postgresql"), :immediately
 end
 
