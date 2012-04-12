@@ -18,6 +18,7 @@
 #
 
 default[:postgresql][:local_auth_method] = "ident"
+default[:postgresql][:postgres_auth_method] = "ident"
 
 case platform
 when "debian"
